@@ -1,0 +1,28 @@
+/**
+** Função : QUESTÃO 01
+** Autor : MAYLLA FERREIRA CAVALCANTE
+** Data : 09/10/2024
+** Observações:
+*/
+
+#include <stdio.h>
+
+double serie_harmonica(int n) {
+    if (n == 1) {
+        return 1.0;
+    } else {
+        return (1.0 / n) + serie_harmonica(n - 1);
+    }
+}
+
+int main() {
+    int n;
+
+    printf("Digite o número de termos da série harmônica: ");
+    scanf("%d", &n);
+
+    double resultado = serie_harmonica(n);
+    printf("A soma dos %d primeiros termos da série harmônica é: %.6lf\n", n, resultado);
+
+    return 0;
+}
